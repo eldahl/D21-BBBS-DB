@@ -23,7 +23,7 @@ CREATE TABLE Booking (
 	paid BOOLEAN NOT NULL,
 	`comment` VARCHAR(10240) NOT NULL,
 	PRIMARY KEY (id),
-	FOREIGN KEY (customerId) REFERENCES Customers(id),
+	FOREIGN KEY (customerId) REFERENCES Customer(id),
 	INDEX idx_comment (comment(255))
 );
 
