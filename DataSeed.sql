@@ -1,6 +1,6 @@
 USE BBBS;
 
-INSERT INTO room (name, description, capacity, pricePerNight, thumbnailImagePath) VALUES 
+INSERT INTO Room (name, description, capacity, pricePerNight, thumbnailImagePath) VALUES 
 (
 	"Cathrines Minde Værelset",
 	"800kr pr nat for to personer. Morgenmad kan tilkøbes á 100kr.\nEt østvendt twin-værelse med to opredte senge og kig til marker og gårdsplads.\nDeler bad og toilet med værelse 2/ Gotland.\nBadeværelse A.",
