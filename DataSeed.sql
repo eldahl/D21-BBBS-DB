@@ -1,5 +1,37 @@
 USE BBBS;
 
+INSERT INTO Customer (email, firstName, lastName, phoneNumber, postalCode, city, address, receiveNewsletter) VALUES
+(
+	"customer@email.com",
+	"Customer",
+	"Customersen",
+	"004512345678",
+	"1234",
+	"København",
+	"Købmandstorvet 123",
+	false
+),
+(
+	"kunde@email.dk",
+	"Kunde",
+	"Kundesen",
+	"004512345678",
+	"1234",
+	"København",
+	"Købmandstorvet 123",
+	false
+),
+(
+	"cammilla@illerslot.dk",
+	"Cammilla",
+	"Schou",
+	"004512345678",
+	"6310",
+	"Iller",
+	"Slotsvej 20A",
+	false
+);
+
 INSERT INTO Room (name, description, capacity, pricePerNight, thumbnailImagePath) VALUES 
 (
 	"Cathrines Minde Værelset",
@@ -71,5 +103,3 @@ INSERT INTO Room (name, description, capacity, pricePerNight, thumbnailImagePath
 	700,
 	"10.png"
 );
-
-
