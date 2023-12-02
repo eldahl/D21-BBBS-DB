@@ -103,3 +103,23 @@ INSERT INTO Room (name, description, capacity, pricePerNight, thumbnailImagePath
 	700,
 	"10.png"
 );
+
+INSERT INTO AdditionalService (name, description, pricePerUnit, thumbnailImagePath) VALUES
+(
+	"Morgenmad",
+	"Det her er morgenmad.",
+	125,
+	"breakfast.png"
+),
+(
+	"DIY Lunchbox",
+	"Smør selv madpakke med masser af godt pålæg.",
+	50,
+	"lunchbox.png"
+), 
+(
+	"Aftensmad",
+	"Det her er aftensmad.",
+	150,
+	"dinner.png"
+);
