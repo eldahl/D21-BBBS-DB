@@ -21,6 +21,7 @@ CREATE TABLE Booking (
 	customerId INT NOT NULL,
 	arrivalDate DATE NOT NULL,
 	departureDate DATE NOT NULL,
+	numberOfPeople INT NOT NULL,
 	paid BOOLEAN NOT NULL,
 	`comment` VARCHAR(10240) NOT NULL,
 	PRIMARY KEY (id),
