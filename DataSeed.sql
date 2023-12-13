@@ -1,6 +1,6 @@
 USE BBBS;
 
-INSERT INTO Customer (email, firstName, lastName, phoneNumber, postalCode, city, address, receiveNewsletter) VALUES
+INSERT INTO Customer (email, firstName, lastName, phone, postalCode, city, address, receiveNewsletter) VALUES
 (
 	"customer@email.com",
 	"Customer",
