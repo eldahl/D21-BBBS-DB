@@ -17,7 +17,7 @@ CREATE TABLE Customer (
 );
 
 CREATE TABLE Booking (
-	id INT NOT NULL AUTO_INCREMENT,
+	id CHAR(36) NOT NULL DEFAULT (UUID()),
 	customerId INT NOT NULL,
 	arrivalDate DATE NOT NULL,
 	departureDate DATE NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE AdditionalService (
 CREATE TABLE RoomForBooking (
 	id INT NOT NULL AUTO_INCREMENT,
 	`date` DATE NOT NULL,
-	bookingId INT NOT NULL,
+	bookingId CHAR(36) NOT NULL,
 	roomId INT NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (bookingId) REFERENCES Booking(id),
@@ -65,7 +65,7 @@ CREATE TABLE RoomForBooking (
 CREATE TABLE AdditionalServiceForBooking (
 	id INT NOT NULL AUTO_INCREMENT,
 	`date` DATE NOT NULL,
-	bookingId INT NOT NULL,
+	bookingId CHAR(36) NOT NULL,
 	additionalServiceId INT NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (bookingId) REFERENCES Booking(id),
@@ -78,4 +78,13 @@ CREATE TABLE AdminUser (
 	passwordHash VARCHAR(255) NOT NULL,
 	passwordSalt VARCHAR(255) NOT NULL,
 	PRIMARY KEY (id)
+);
+
+CREATE TABLE LanguageStringTable (
+	id INT NOT NULL AUTO_INCREMENT,
+	`uniqueIdentifier` CHAR(36) NOT NULL UNIQUE,
+	langCode CHAR(4) NOT NULL,
+	dataString VARCHAR(2048) NOT NULL,
+	PRIMARY KEY (id),
+	INDEX idx_dataString (dataString(255))
 );
