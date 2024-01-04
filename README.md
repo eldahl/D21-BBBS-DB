@@ -1,1 +1,1 @@
-!(Console)[console.png]
+![Console](console.png)
